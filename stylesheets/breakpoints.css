@@ -1,0 +1,118 @@
+@media (max-width: 1024px) {
+    .calculator {
+        margin: 114px 0;
+    }
+}
+
+@media (max-width: 425px) {
+    body {
+        background-size: 350px;
+    }
+
+    .calculator {
+        margin: 80px 20px;
+        padding-top: 30px;
+    }
+
+    .display {
+        width: 306.25px;
+        height: 210px;
+    }
+
+    .keyboard {
+        width: 306.25px;
+        height: 451.50px;
+        gap: 14px;
+    }
+
+    .keys {
+        display: grid;
+        grid-template-columns: auto auto auto auto;
+        gap: 14px 11.38px;
+    }
+
+    .button {
+        padding: 6.13px;
+        width: 61.25px;
+        height: 61.25px;
+        border-radius: 50%;
+        border: none;
+
+        font-size: 1.58rem;
+        font-weight: 400;
+
+    }
+
+    .last-row {
+    display: grid;
+    grid-template-columns: auto auto auto;
+    gap: 11.38px;
+    }
+
+    .button2{
+    width: 133.88px;
+    border-radius: 50px;
+    text-align: left;
+    padding-left: 24.50px;
+    }
+}
+
+@media (max-width: 320px) {
+    body {
+        background-size: 263.53px;
+    }
+
+    .calculator {
+        margin: 10px 5px;
+        padding-top: 95px;
+    }
+
+    .display {
+        width: 232px;
+        height: 160px;
+        border-radius: 20px 20px 0 0;
+    }
+
+    .display h1 {
+        font-size: 3.50rem;
+    }
+
+    .keyboard {
+        width: 232px;
+        height: 339.95px;
+        gap: 10.54px;
+
+        border-radius: 0 0 20px 20px;
+    }
+
+    .keys {
+        display: grid;
+        grid-template-columns: auto auto auto auto;
+        gap: 10.54px 8.57px;
+    }
+
+    .button {
+        padding: 4.62px;
+        width: 46.12px;
+        height: 46.12px;
+        border-radius: 50%;
+        border: none;
+
+        font-size: 1.19rem;
+        font-weight: 400;
+
+    }
+
+    .last-row {
+        display: grid;
+        grid-template-columns: auto auto auto;
+        gap: 8.57px;
+    }
+
+    .button2 {
+        width: 100.80px;
+        border-radius: 50px;
+        text-align: left;
+        padding-left: 18.45px;
+    }
+}
