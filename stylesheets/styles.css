@@ -102,3 +102,9 @@ body{
     background-color: rgb(146, 146, 146);
     color: black;
 }
+
+/* Lock zoom on mobile version */
+:root {
+    touch-action: pan-x pan-y;
+    height: 100%
+}
