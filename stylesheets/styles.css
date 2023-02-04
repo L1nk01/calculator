@@ -1,0 +1,106 @@
+body{
+    /* Frame */
+    background-image: url("../media/frame.png");
+    background-repeat: no-repeat;
+    background-size: 400px;
+    background-position-x: center;
+    background-position-y: 90px;
+    background-color: rgb(19, 51, 47);
+
+    /* Body Attributes */
+    text-align: center;
+    margin: 0;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    user-select: none;
+}
+
+/* The whole calculator */
+.calculator {
+    display: grid;
+    grid-template-rows: auto auto;
+    margin: 0;
+    justify-content: center;
+    margin-top: 114px;
+}
+
+.display {
+    background-color: black;
+    width: 350px;
+    height: 240px;
+    border-radius: 30px 30px 0 0;
+    color: white;
+
+    display: grid;
+    justify-content: right;
+    align-content: end;
+}
+
+/* Text inside the display */
+.display h1 {
+    margin: 0 20px 0 0;
+    font-weight: 400;
+    font-size: 5rem;
+}
+
+/* The keyboard as a whole, first rows and last one unified */
+.keyboard {
+    background-color: black;
+    width: 350px;
+    height: 516px;
+    border-radius: 0 0 30px 30px;
+
+    display: grid;
+    grid-template-rows: auto auto;
+    margin: 0;
+    justify-content: center;
+    align-content: center;
+    gap: 16px;
+}
+
+/* The grid of buttons */
+.keys {
+    display: grid;
+    grid-template-columns: auto auto auto auto;
+    gap: 16px 13px;
+}
+
+/* Button Rows */
+.button {
+    padding: 7px;
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+    border: none;
+
+    font-size: 1.8rem;
+    font-weight:400;
+    
+    background-color: rgb(53, 53, 53);
+    color: white;
+}
+
+/* Another row of buttons to make the big one fit better */
+.last-row {
+    display: grid;
+    grid-template-columns: auto auto auto;
+    gap: 13px;
+
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+/* A separate button in order to make bigget than the rest */
+.button2{
+    width: 153px;
+    border-radius: 50px;
+    text-align: left;
+    padding-left: 28px;
+}
+
+.gold{
+    background-color: rgb(255, 145, 0);
+}
+
+.light-gray{
+    background-color: rgb(146, 146, 146);
+    color: black;
+}
