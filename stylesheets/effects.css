@@ -1,18 +1,10 @@
 /* Hover Effects */
 
-.circle:hover {
+.button:hover {
     background-color: rgb(139, 139, 139);
 }
 
-.circle:not(:hover){
-    animation: fadeOutCircle 0.50s;
-}
-
-.circle2:hover {
-    background-color: rgb(139, 139, 139);
-}
-
-.circle2:not(:hover){
+.button:not(:hover){
     animation: fadeOutCircle 0.50s;
 }
 
@@ -31,6 +23,8 @@
 .light-gray:not(:hover) {
     animation: fadeOutLightGray 0.50s;
 }
+
+/* Fade Hovering Effects */
 
 @keyframes fadeOutCircle {
     from {
@@ -59,15 +53,5 @@
 
     to {
         background-color: rgb(146, 146, 146);
-    }
-}
-
-@keyframes fadeOut {
-    from {
-        opacity: 1;
-    }
-
-    to {
-        opacity: 0;
     }
 }

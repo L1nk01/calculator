@@ -1,11 +1,9 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Web Calculator</title>
+    <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width, height=device-height, target-densitydpi=device-dpi" />
 
     <!-- Favicon -->
     <link rel="apple-touch-icon" sizes="180x180" href="./favicon/apple-touch-icon.png">
@@ -18,99 +16,53 @@
 
     <!-- Stylesheets -->
     <link rel="stylesheet" href="./stylesheets/styles.css">
-    <link rel="stylesheet" href="./stylesheets/buttons.css">
     <link rel="stylesheet" href="./stylesheets/effects.css">
+    <link rel="stylesheet" href="./stylesheets/breakpoints.css">
 
-    <!-- Scripts -->
+    <!--Scripts-->
 
+    <title>Grid Test</title>
 </head>
+<body>
+    <div class="calculator">
 
-<body class="background">
+        <div class="display">
+            <h1>0</h1>
+        </div>
 
-    <div class="page">
+        <div class="keyboard">
 
-        <!-- <h1>Online Calculator</h1> -->
+            <div class="keys">
 
-        <div class="grid-container">
+                <button class="button light-gray">AC</button>
+                <button class="button light-gray">+/-</button>
+                <button class="button light-gray">%</button>
+                <button class="button gold">÷</button>
 
-            <div class="display">
-                <h3 class="number-display">123,456</h3>
+                <button class="button">7</button>
+                <button class="button">8</button>
+                <button class="button">9</button>
+                <button class="button gold">x</button>
+
+                <button class="button">4</button>
+                <button class="button">5</button>
+                <button class="button">6</button>
+                <button class="button gold">-</button>
+
+                <button class="button">1</button>
+                <button class="button">2</button>
+                <button class="button">3</button>
+                <button class="button gold">+</button>
+
             </div>
 
-            <div class="buttons">
+            <div class="last-row">
 
-                <div class="top-row row">
-                    <div class="circle light-gray">
-                        <p class="number">AC</p>
-                    </div>
-                    <div class="circle light-gray">
-                        <p class="number">±</p>
-                    </div>
-                    <div class="circle light-gray">
-                        <p class="number">%</p>
-                    </div>
-                    <div class="circle gold">
-                        <p class="number">÷</p>
-                    </div>
-                </div>
+                <button class="button button2">0</button>
+                <button class="button">.</button>
+                <button class="button gold">=</button>
 
-                <div class="row">
-                    <div class="circle">
-                        <p class="number">7</p>
-                    </div>
-                    <div class="circle">
-                        <p class="number">8</p>
-                    </div>
-                    <div class="circle">
-                        <p class="number">9</p>
-                    </div>
-                    <div class="circle gold">
-                        <p class="number">x</p>
-                    </div>
-                </div>
-
-                <div class="row">
-                    <div class="circle">
-                        <p class="number">4</p>
-                    </div>
-                    <div class="circle">
-                        <p class="number">5</p>
-                    </div>
-                    <div class="circle">
-                        <p class="number">6</p>
-                    </div>
-                    <div class="circle gold">_</div>
-                </div>
-
-                <div class="row">
-                    <div class="circle">
-                        <p class="number">1</p>
-                    </div>
-                    <div class="circle">
-                        <p class="number">2</p>
-                    </div>
-                    <div class="circle">
-                        <p class="number">3</p>
-                    </div>
-                    <div class="circle gold">
-                        <p class="number">+</p>
-                    </div>
-                </div>
-
-                <div class="last-row">
-                    <div class="circle2">
-                        <p class="number0">0</p>
-                    </div>
-                    <div class="circle">
-                        <p class="number">.</p>
-                    </div>
-                    <div class="circle gold">
-                        <p class="number">=</p>
-                    </div>
-                </div>
-                
             </div>
-
         </div>
 
     </div>
