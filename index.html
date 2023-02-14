@@ -6,8 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="theme-color" content="rgb(19, 51, 47)">
 
-    <title>Calculator</title>
-    
+
     <!-- Favicon -->
     <link rel="apple-touch-icon" sizes="180x180" href="./favicon/apple-touch-icon.png">
     <link rel="icon" type="image/png" sizes="32x32" href="./favicon//favicon-32x32.png">
@@ -23,47 +22,49 @@
     <link rel="stylesheet" href="./stylesheets/breakpoints.css">
 
     <!--Scripts-->
-    
+    <script type="text/javascript" src="./index.js" defer></script>
+
+    <title>Calculator</title>
     
 </head>
 <body>
     <div class="calculator">
 
         <div class="display">
-            <h1>0</h1>
+            <h1 id="text">0</h1>
         </div>
 
         <div class="keyboard">
 
-            <div class="keys">
+            <div id="keys" class="keys">
 
-                <button class="button light-gray">AC</button>
-                <button class="button light-gray">+/-</button>
-                <button class="button light-gray">%</button>
-                <button class="button gold">÷</button>
+                <button id="ac" class="operator button light-gray">AC</button>
+                <button id="plusminus" class="button light-gray">+/-</button>
+                <button id="percentage" class="button light-gray">%</button>
+                <button id="division" class="operator button gold">÷</button>
 
-                <button class="button">7</button>
-                <button class="button">8</button>
-                <button class="button">9</button>
-                <button class="button gold">x</button>
+                <button id="n7" class="number button">7</button>
+                <button id="n8" class="number button">8</button>
+                <button id="n9" class="number button">9</button>
+                <button id="multiplication" class="operator button gold">x</button>
 
-                <button class="button">4</button>
-                <button class="button">5</button>
-                <button class="button">6</button>
-                <button class="button gold">-</button>
+                <button id="n4" class="number button">4</button>
+                <button id="n5" class="number button">5</button>
+                <button id="n6" class="number button">6</button>
+                <button id="minus" class="operator button gold">-</button>
 
-                <button class="button">1</button>
-                <button class="button">2</button>
-                <button class="button">3</button>
-                <button class="button gold">+</button>
+                <button id="n1" class="number button">1</button>
+                <button id="n2" class="number button">2</button>
+                <button id="n3" class="number button">3</button>
+                <button id="plus" class="operator button gold">+</button>
 
             </div>
 
             <div class="last-row">
 
-                <button class="button button2">0</button>
-                <button class="button">.</button>
-                <button class="button gold">=</button>
+                <button id="n0" class="number button button2">0</button>
+                <button id="dot" class="button">.</button>
+                <button id="equal" class="operator button gold">=</button>
 
             </div>
         </div>
