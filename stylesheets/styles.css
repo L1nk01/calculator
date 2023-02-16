@@ -1,6 +1,6 @@
 :root {
-    touch-action: pan-x;
-/*     height: 100%; */
+/*     touch-action: pan-x; */
+    height: 100%;
 }
 
 body{
