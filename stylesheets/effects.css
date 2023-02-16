@@ -5,8 +5,12 @@
 }
 
 .button:not(:hover){
-    animation: fadeOutCircle 0.50s;
+    animation: fadeOutCircle 0.1s;
 }
+
+/* .button:active {
+    animation: buttonClickMobile 0.50s;
+} */
 
 .gold:hover {
     background-color: rgb(255, 173, 79);
@@ -55,3 +59,15 @@
         background-color: rgb(146, 146, 146);
     }
 }
+
+/* @keyframes buttonClickMobile {
+    from {
+        width: 70px;
+        height: 70px;
+    }
+
+    to {
+        width: 80px;
+        height: 80px;
+    }
+} */
