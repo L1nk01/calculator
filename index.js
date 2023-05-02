@@ -1,6 +1,7 @@
 const container = document.querySelector("#keys");
 const display = document.querySelector("#text");
 
+const text = document.querySelector("#text");
 const ac = document.querySelector("#ac");
 const eq = document.querySelector("#eq");
 const plusminus = document.querySelector("#plusminus");
@@ -22,13 +23,23 @@ keys.addEventListener("click", (event) => {
 
     // Numbers
     if (event.target.matches(".number")) {
-        if (display.textContent === "-0") {
-            display.textContent = "-";
-        } else if (display.textContent === "0") {
-            display.textContent = "";
-        }
+        if (text.textContent.length < 10) {
+            if (display.textContent === "-0") {
+                display.textContent = "-";
+            } else if (display.textContent === "0") {
+                display.textContent = "";
+            }
+        
+            if (text.textContent.length > 4) {
+                text.style.fontSize = "4rem"; // 3 -> 12 / 4 -> 9 / 5 -> 7
+            }
+            
+            if (text.textContent.length > 5) {
+                text.style.fontSize = "3rem";
+            }
 
-        display.textContent += event.target.textContent;
+            display.textContent += event.target.textContent;
+        }
     }
 
     // Operators
@@ -146,4 +157,3 @@ keys.addEventListener("click", (event) => {
         display.textContent = result;
     }
 });
-
