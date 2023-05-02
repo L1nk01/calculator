@@ -1,6 +1,5 @@
 const container = document.querySelector("#keys");
 const number = document.querySelectorAll(".number");
-const operator = document.querySelectorAll(".operator");
 const display = document.querySelector("#text");
 
 const ac = document.querySelector("#ac");
@@ -10,6 +9,7 @@ const dot = document.querySelector("#dot");
 const percentage = document.querySelector("#percentage");
 
 var firstNumber = 0;
+var operator = "";
 var secondNumber = 0;
 var result = 0;
 
@@ -34,6 +34,7 @@ keys.addEventListener("click", (event) => {
             firstNumber = parseInt(display.textContent);
             display.textContent = 0;
             isSecondNumber = true;
+            operator = event.target.textContent;
         } else {
             secondNumber = parseInt(display.textContent);
         }
@@ -77,7 +78,23 @@ keys.addEventListener("click", (event) => {
 
     // Equal
     if (event.target.matches("#eq")) {
-        // code
+        secondNumber = parseInt(display.textContent);
+        console.log(firstNumber, secondNumber, operator);
+        switch (operator) {
+            case '+':
+                result = firstNumber + secondNumber;
+                break;
+            case "-":
+                result = firstNumber - secondNumber;
+                break;
+            case "x":
+                result = firstNumber * secondNumber;
+                break;
+            case "÷":
+                result = firstNumber / secondNumber;
+                break;
+        }
+        display.textContent = result;
     }
 });
 
