@@ -72,10 +72,92 @@ body{
 }
 
 /* The grid of buttons */
+/* Yeah... it's unnecessarily long */
 .keys {
     display: grid;
-    grid-template-columns: auto auto auto auto;
+    grid-template-areas:
+        "ac plusminus percentage division"
+        "n7 n8 n9 multiplication"
+        "n4 n5 n6 minus"
+        "n1 n2 n3 plus"
+        "n0 n0 dot eq";
     gap: 16px 13px;
+}
+
+#ac {
+    grid-area: ac;
+}
+
+#plusminus {
+    grid-area: plusminus;
+}
+
+#percentage {
+    grid-area: percentage;
+}
+
+#division {
+    grid-area: division;
+}
+
+#n7 {
+    grid-area: n7;
+}
+
+#n8 {
+    grid-area: n8;
+}
+
+#n9 {
+    grid-area: n9;
+}
+
+#multiplication {
+    grid-area: multiplication;
+}
+
+#n4 {
+    grid-area: n4;
+}
+
+#n5 {
+    grid-area: n5;
+}
+
+#n6 {
+    grid-area: n6;
+}
+
+#minus {
+    grid-area: minus;
+}
+
+#n1 {
+    grid-area: n1;
+}
+
+#n2 {
+    grid-area: n2;
+}
+
+#n3 {
+    grid-area: n3;
+}
+
+#plus {
+    grid-area: plus;
+}
+
+#n0 {
+    grid-area: n0;
+}
+
+#dot {
+    grid-area: dot;
+}
+
+#eq {
+    grid-area: eq;
 }
 
 /* Button Rows */
@@ -91,13 +173,6 @@ body{
     
     background-color: rgb(53, 53, 53);
     color: white;
-}
-
-/* Another row of buttons to make the big one fit better */
-.last-row {
-    display: grid;
-    grid-template-columns: auto auto auto;
-    gap: 13px;
 }
 
 /* A separate button in order to make bigget than the rest */
