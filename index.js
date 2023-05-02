@@ -23,7 +23,7 @@ keys.addEventListener("click", (event) => {
 
     // Numbers
     if (event.target.matches(".number")) {
-        if (text.textContent.length < 10) {
+        if (text.textContent.length < 9) {
             if (display.textContent === "-0") {
                 display.textContent = "-";
             } else if (display.textContent === "0") {
@@ -34,7 +34,7 @@ keys.addEventListener("click", (event) => {
                 text.style.fontSize = "4rem"; // 3 -> 12 / 4 -> 9 / 5 -> 7
             }
             
-            if (text.textContent.length > 5) {
+            if (text.textContent.length > 6) {
                 text.style.fontSize = "3rem";
             }
 
@@ -89,6 +89,7 @@ keys.addEventListener("click", (event) => {
         negativeFlag = false;
         isSecondNumber = false;
         firstEqual = true;
+        text.style.fontSize = "4.5rem";
         display.textContent = "0";
     }
 
@@ -119,41 +120,43 @@ keys.addEventListener("click", (event) => {
 
     // Equal
     if (event.target.matches("#eq")) {
-        isSecondNumber = false;
+        if (firstNumber !== 0) {
+            isSecondNumber = false;
 
-        if (firstEqual) {
-            secondNumber = parseFloat(display.textContent);
-            firstEqual = false;
+            if (firstEqual) {
+                secondNumber = parseFloat(display.textContent);
+                firstEqual = false;
+            }
+
+            if (secondNumber % 1 === 0) {
+                secondNumber = parseInt(secondNumber);
+            }
+
+            switch (operator) {
+                case '+':
+                    result = firstNumber + secondNumber;
+                    break;
+                case "-":
+                    result = firstNumber - secondNumber;
+                    break;
+                case "x":
+                    result = firstNumber * secondNumber;
+                    break;
+                case "÷":
+                    result = firstNumber / secondNumber;
+                    break;
+            }
+
+            if (firstEqual) {
+                secondNumber = firstNumber;
+            }
+
+            firstNumber = result;
+
+            if (result % 1 !== 0) {
+                result = result.toFixed(4);
+            }
+            display.textContent = result;
         }
-
-        if (secondNumber % 1 === 0) {
-            secondNumber = parseInt(secondNumber);
-        }
-
-        switch (operator) {
-            case '+':
-                result = firstNumber + secondNumber;
-                break;
-            case "-":
-                result = firstNumber - secondNumber;
-                break;
-            case "x":
-                result = firstNumber * secondNumber;
-                break;
-            case "÷":
-                result = firstNumber / secondNumber;
-                break;
-        }
-
-        if (firstEqual) {
-            secondNumber = firstNumber;
-        }
-
-        firstNumber = result;
-
-        if (result % 1 !== 0) {
-            result = result.toFixed(4);
-        }
-        display.textContent = result;
     }
 });

@@ -26,12 +26,12 @@
 
 @media (min-width: 426px) and (max-width: 900px) {
     .calculator {
-        gap: 17px;
+        gap: 30px;
     }
 
     .display {
         width: 425px;
-        height: 220px;
+        height: 190px;
     }
 
     .keyboard {
@@ -75,9 +75,13 @@
 
 @media (max-width: 425px) {
 
+    .calculator {
+        gap: 20px;
+    }
+
     .display {
         width: 435px;
-        height: 220px;
+        height: 190px;
     }
 
     .display h1 {
@@ -124,7 +128,6 @@
     }
 
     .display h1 {
-        font-size: 4rem;
         margin: 0 30px 0 0;
     }
 
@@ -148,6 +151,6 @@
     .button2 {
         width: auto;
         text-align: left;
-        padding-left: 26px;
+        padding-left: 23.50px;
     }
 }
