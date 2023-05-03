@@ -45,6 +45,8 @@ keys.addEventListener("click", (event) => {
     // Operators
     if (event.target.matches(".operator")) {
 
+        dotFlag = false;
+
         if (!isSecondNumber) {
             firstNumber = parseFloat(display.textContent);
 
@@ -55,6 +57,7 @@ keys.addEventListener("click", (event) => {
             display.textContent = 0;
             isSecondNumber = true;
             operator = event.target.textContent;
+
         } else {
             secondNumber = parseFloat(display.textContent);
             display.textContent = "0";
@@ -85,7 +88,7 @@ keys.addEventListener("click", (event) => {
         firstNumber = 0;
         secondNumber = 0;
         result = 0;
-        dotCounter = 0;
+        dotFlag = false;
         negativeFlag = false;
         isSecondNumber = false;
         firstEqual = true;
@@ -107,9 +110,9 @@ keys.addEventListener("click", (event) => {
 
     // Dot
     if (event.target.matches("#dot")) {
-        if (!dotCounter) {
+        if (!dotFlag) {
             display.textContent += ".";
-            dotCounter = true;
+            dotFlag = true;
         }
     }
     
@@ -120,6 +123,9 @@ keys.addEventListener("click", (event) => {
 
     // Equal
     if (event.target.matches("#eq")) {
+
+        dotFlag = false;
+
         if (firstNumber !== 0) {
             isSecondNumber = false;
 
