@@ -19,6 +19,23 @@ var negativeFlag = false;
 var isSecondNumber = false;
 var firstEqual = true;
 
+function removeTrailingZeros(result) {
+    let resultString = result.toString();
+    let i = resultString.length - 1;
+    let toRemove = "";
+
+    resultString = resultString.replace(/\d(?=[^\d]*$)/, "");
+
+    while (resultString[i] === "0" && i > result.indexOf(".")) {
+        toRemove += resultString.slice(i - 1, i)
+        i--;
+    }
+    
+    resultString = resultString - toRemove;
+
+    return resultString
+}
+
 keys.addEventListener("click", (event) => {
 
     // Numbers
@@ -160,7 +177,11 @@ keys.addEventListener("click", (event) => {
             firstNumber = result;
 
             if (result % 1 !== 0) {
-                result = result.toFixed(4);
+                result = removeTrailingZeros(result);
+                
+                if (result.length > 9) {
+                    result = result.toFixed(5);
+                }
             }
             display.textContent = result;
         }
